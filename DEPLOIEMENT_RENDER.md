@@ -380,6 +380,29 @@ Puis resoudre les conflits eventuels, refaire un commit, et pousser.
 
 ## Phase 6 - Creation du Static Site sur Render
 
+Statut : prepare le 2026-05-06.
+
+Preparation realisee :
+
+- ajout d'un fichier `render.yaml` a la racine du depot ;
+- declaration du site statique Render `ed3s-map-2026` ;
+- runtime Render : `static` ;
+- branche : `main` ;
+- build command :
+
+```bash
+pip install -r requirements.txt && python main.py && cp output/carte_d3s.html output/index.html
+```
+
+- dossier publie : `./output` ;
+- auto deploy active sur chaque commit ;
+- variable `SKIP_INSTALL_DEPS=true` ajoutee pour eviter une installation automatique en double, puisque le build installe deja les dependances Python explicitement.
+
+Deux chemins Render sont possibles :
+
+- chemin recommande : creer un `Blueprint` depuis le depot GitHub ; Render lira `render.yaml` ;
+- chemin manuel : creer un `Static Site` et recopier les parametres indiques plus bas.
+
 Objectif : creer le service Render qui publie la carte.
 
 Dans Render :
@@ -401,6 +424,16 @@ Build Command: pip install -r requirements.txt && python main.py && cp output/ca
 Publish Directory: output
 Auto-Deploy: Yes
 ```
+
+Option Blueprint :
+
+1. ouvrir https://dashboard.render.com ;
+2. cliquer sur `New` ;
+3. choisir `Blueprint` ;
+4. selectionner le depot `m1k124/ED3S_Map_2026` ;
+5. verifier que Render detecte le fichier `render.yaml` a la racine ;
+6. verifier que le service prevu s'appelle `ed3s-map-2026` ;
+7. lancer `Deploy Blueprint`.
 
 Notes :
 

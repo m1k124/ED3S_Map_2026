@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ed3s-map-2026
+    runtime: static
+    branch: main
+    buildCommand: pip install -r requirements.txt && python main.py && cp output/carte_d3s.html output/index.html
+    staticPublishPath: ./output
+    autoDeployTrigger: commit
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
