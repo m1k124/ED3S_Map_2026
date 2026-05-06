@@ -444,6 +444,25 @@ Notes :
 
 ## Phase 7 - Premier deploy et verification Render
 
+Statut : termine le 2026-05-06.
+
+Resultat Render :
+
+- Blueprint Render cree depuis le depot `m1k124/ED3S_Map_2026` ;
+- Blueprint ID : `exs-d7td6uf7f7vs739rafm0` ;
+- service statique cree : `ed3s-map-2026` ;
+- sync Render executee sur le commit `66efa4a Prepare Render static site blueprint` ;
+- URL publique verifiee : `https://ed3s-map-2026.onrender.com` ;
+- reponse HTTP de la racine : `HTTP/2 200` ;
+- `content-type` de la racine : `text/html; charset=utf-8` ;
+- HTML publie verifie avec les contenus `Constance Pascal`, `Carte interactive des avis de vacance D3S` et `Consulter Plaquette Promo` ;
+- fond de carte Carto Light detecte dans le HTML publie ;
+- PDF `https://ed3s-map-2026.onrender.com/plaquette-promo.pdf` verifie avec une reponse `HTTP/2 200` et `content-type: application/pdf`.
+
+Point de vigilance restant :
+
+- le PDF en ligne est encore le PDF temporaire ; il faudra le remplacer par la vraie plaquette officielle avant diffusion large.
+
 Objectif : confirmer que la carte est bien accessible publiquement.
 
 Pendant le premier deploy, lire les logs Render.
