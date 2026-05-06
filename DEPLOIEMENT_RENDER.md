@@ -613,6 +613,15 @@ Commandes de validation :
 ./.venv/bin/python scripts/check_build_output.py
 ```
 
+Resultat de validation :
+
+- generation locale OK avec 297 lignes lues, 293 postes valides, 0 poste sans coordonnees exploitable et 4 doublons supprimes ;
+- `scripts/check_build_output.py` passe ;
+- `build.sh` passe localement ;
+- commit pousse : `d77977f Harden Render build and publish static assets` ;
+- asset logo public verifie : `https://ed3s-map-2026.onrender.com/promotion-logo.jpeg` repond en `HTTP/2 200` avec `content-type: image/jpeg` ;
+- HTML public corrige verifie avec `?v=d77977f`, le temps que le cache CDN de la racine se rafraichisse.
+
 Point restant :
 
 - remplacer le PDF temporaire `output/plaquette-promo.pdf` par la vraie plaquette officielle.
