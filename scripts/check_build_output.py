@@ -20,7 +20,8 @@ REQUIRED_MARKERS = [
     "Constance Pascal",
     "Consulter Plaquette Promo",
     'id="map"',
-    "basemaps.cartocdn.com/light_all",
+    "tile.openstreetmap.fr/osmfr",
+    "dna.d3s@edu.ehesp.fr",
 ]
 
 

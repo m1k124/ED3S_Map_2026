@@ -13,7 +13,7 @@ marker_cluster_enabled: true
 deduplicate: true
 
 title: "Carte dynamique des avis de vacance D3S"
-subtitle: "Postes de chefs d'établissement, directeurs adjoints et postes réservés aux élèves directeurs"
+subtitle: "Postes de chefs d'établissement, directeurs adjoints et postes réservés aux élèves directeurs d’établissement sanitaire, social et médico-social"
 institution_label: "Données issues des avis de vacance D3S"
 default_missing_value: "Non renseigné"
 
