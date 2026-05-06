@@ -1,0 +1,172 @@
+input_excel_path: "data/postes_d3s.xlsx"
+sheet_name: "Postes_enrichis"
+
+output_html_path: "output/carte_d3s.html"
+output_valid_csv_path: "output/postes_valides.csv"
+output_missing_coords_csv_path: "output/postes_sans_coordonnees.csv"
+finess_reference_csv_path: "data/referentiel_finess.csv"
+
+map_center_lat: 46.6
+map_center_lon: 2.4
+map_zoom: 6
+marker_cluster_enabled: true
+deduplicate: true
+
+title: "Carte dynamique des avis de vacance D3S"
+subtitle: "Postes de chefs d'établissement, directeurs adjoints et postes réservés aux élèves directeurs"
+institution_label: "Données issues des avis de vacance D3S"
+default_missing_value: "Non renseigné"
+
+category_colors:
+  "Chef d'établissement": "#1d4ed8"
+  "Directeur adjoint": "#047857"
+  "Poste réservé aux élèves directeurs": "#b45309"
+  "Autre / non précisé": "#64748b"
+
+column_aliases:
+  poste:
+    - poste
+    - intitule du poste
+    - intitule_poste
+    - intitulé poste
+    - intitulé du poste
+    - type poste
+    - type_poste
+    - emploi
+    - fonction
+  ville:
+    - ville
+    - ville principale
+    - ville_principale
+    - commune
+    - localite
+  departement:
+    - departement
+    - département
+    - dept
+    - code departement
+    - code_departement
+    - code_département
+  region:
+    - region
+    - région
+  lieux_poste:
+    - lieux du poste
+    - lieu du poste
+    - lieu(x) du poste
+    - lieu(x)_du_poste
+    - lieux_poste
+    - localisation
+  etablissements:
+    - etablissements
+    - etablissement
+    - établissement
+    - établissements
+    - etablissement(s)
+    - etablissements
+    - etablissements rattaches
+  finess:
+    - finess
+    - finess et
+    - finess_et
+    - numero finess et
+    - numero_finess_et
+    - numero finess
+    - no finess
+  mois_parution:
+    - mois de parution
+    - mois_parution
+    - mois
+  annee_parution:
+    - annee de parution
+    - année de parution
+    - annee_parution
+    - année_parution
+    - annee
+    - année
+  categorie:
+    - categorie de publication
+    - catégorie de publication
+    - categorie_publication
+    - catégorie_publication
+    - chef d'établissement / directeur adjoint / poste réservé élèves directeurs
+    - chef etablissement directeur adjoint poste reserve eleves directeurs
+    - type de publication
+    - nature poste
+  latitude:
+    - latitude
+    - lat
+    - y
+  longitude:
+    - longitude
+    - lon
+    - lng
+    - long
+    - x
+  latitude_finess:
+    - latitude finess
+    - latitude_finess
+    - lat finess
+  longitude_finess:
+    - longitude finess
+    - longitude_finess
+    - lon finess
+    - lng finess
+  qualite_coordonnees:
+    - qualite coordonnees
+    - qualité coordonnées
+    - qualite_coordonnees
+    - précision coordonnées
+    - precision coordonnees
+  source_coordonnees:
+    - source coordonnees
+    - source coordonnées
+    - source_coordonnees
+    - sourcecoordet
+  source:
+    - source
+    - url source
+    - url_source
+    - lien source
+    - url
+  observations:
+    - commentaires
+    - commentaire
+    - commentaire correction
+    - commentaire_correction
+    - observations
+    - commentaires observations eventuelles
+    - commentaires / observations éventuelles
+    - commentaire observation
+    - texte source poste
+    - texte_source_poste
+  type_structure:
+    - type structure
+    - type_structure
+    - secteur
+    - secteur etablissement
+    - secteur_etablissement
+  type_etablissement:
+    - type etablissement
+    - type d'etablissement
+    - type d’établissement
+    - type_etablissement
+    - nature etablissement
+    - nature_etablissement
+    - categorie etablissement
+    - catégorie établissement
+    - categorie_etablissement
+  texte_source_poste:
+    - texte source poste
+    - texte_source_poste
+    - extrait source
+    - extrait_source
+  raison_sociale_finess:
+    - raison sociale finess
+    - raison_sociale_finess
+    - raison sociale
+  qualite_appariement_finess:
+    - qualite appariement finess
+    - qualité appariement finess
+    - qualite_appariement_finess
+    - qualité_appariement_finess
