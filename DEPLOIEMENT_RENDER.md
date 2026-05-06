@@ -292,6 +292,32 @@ Criteres de validation apres modifications :
 
 ## Phase 5 - Initialisation Git locale
 
+Statut : termine le 2026-05-06.
+
+Resultat de validation :
+
+- depot Git initialise localement ;
+- branche locale renommee en `main` ;
+- identite Git locale configuree pour ce depot : `m1k124 <m1k124@users.noreply.github.com>` ;
+- remote `origin` ajoute : `https://github.com/m1k124/ED3S_Map_2026.git` ;
+- commit initial cree : `c3eb8af Prepare ED3S map for Render deployment` ;
+- contenu distant initial integre : `LICENSE` depuis le commit GitHub `6b2a145` ;
+- commit de merge cree : `6f2e8ef Merge branch 'main' of https://github.com/m1k124/ED3S_Map_2026` ;
+- push vers GitHub reussi apres configuration HTTP locale plus robuste ;
+- verification distante : `origin/main` pointe sur `6f2e8ef`.
+
+Note technique :
+
+- le premier push HTTPS a echoue avec une coupure HTTP ;
+- le push a fonctionne apres configuration locale :
+
+```bash
+git config http.version HTTP/1.1
+git config http.postBuffer 157286400
+git config http.lowSpeedLimit 0
+git config http.lowSpeedTime 999999
+```
+
 Objectif : lier le dossier local au depot GitHub deja cree.
 
 Depuis le dossier du projet :
