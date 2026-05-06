@@ -591,6 +591,32 @@ Render invalide normalement son cache CDN apres un deploy reussi, mais un cache 
 
 ## Phase 10 - Evolution possible apres la premiere mise en ligne
 
+Statut : corrections appliquees le 2026-05-06.
+
+Corrections realisees :
+
+- ajout d'un `build.sh` versionne ;
+- mise a jour de `render.yaml` pour utiliser `./build.sh` comme commande Render ;
+- conservation et correction du `.gitignore`, avec exclusion du fichier logo source au nom temporaire ;
+- ajout d'une copie automatique de `carte_d3s.html` vers `index.html` directement dans `src/html_renderer.py` ;
+- ajout d'une copie automatique des assets du dossier `static/` vers `output/` pendant la generation ;
+- remplacement du logo CSS provisoire par le vrai logo JPEG de la promotion ;
+- ajout de `static/promotion-logo.jpeg` ;
+- ajout d'un message d'alerte dans le template si aucune donnee exploitable n'est disponible ;
+- ajout d'un controle automatise `scripts/check_build_output.py` ;
+- ajout d'une documentation separee `docs/MISE_A_JOUR_DONNEES.md`.
+
+Commandes de validation :
+
+```bash
+./.venv/bin/python main.py
+./.venv/bin/python scripts/check_build_output.py
+```
+
+Point restant :
+
+- remplacer le PDF temporaire `output/plaquette-promo.pdf` par la vraie plaquette officielle.
+
 Une fois la premiere version publiee, on pourra rendre le projet plus robuste avec :
 
 - un `build.sh` versionne ;

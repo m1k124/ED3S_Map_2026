@@ -47,6 +47,9 @@ def load_config(config_path: str | Path = "config/settings.yaml") -> dict[str, A
     config["project_root"] = project_root
     config["input_excel_path"] = resolve_path(config["input_excel_path"], project_root)
     config["output_html_path"] = resolve_path(config["output_html_path"], project_root)
+    config["output_index_html_path"] = resolve_path(
+        config.get("output_index_html_path", "output/index.html"), project_root
+    )
     config["output_valid_csv_path"] = resolve_path(config["output_valid_csv_path"], project_root)
     config["output_missing_coords_csv_path"] = resolve_path(
         config["output_missing_coords_csv_path"], project_root
